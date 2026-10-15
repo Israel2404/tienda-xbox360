@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configuración · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<form class="card" id="fCfg" novalidate style="max-width:640px">
+  <div class="form-grid">
+    <div class="field full"><label>Nombre de la tienda <span class="req">*</span></label><input class="input" name="nombre_tienda" required minlength="3" maxlength="60"><div class="err"></div></div>
+    <div class="field"><label>Tasa de IVA (0 a 0.30) <span class="req">*</span></label><input class="input" type="number" name="tasa_iva" required min="0" max="0.30" step="0.01"><div class="err"></div></div>
+    <div class="field"><label>Stock mínimo sugerido <span class="req">*</span></label><input class="input" type="number" name="stock_minimo_default" required min="0" max="100" step="1"><div class="err"></div></div>
+    <div class="field"><label>Máx. unidades del mismo juego por venta <span class="req">*</span></label><input class="input" type="number" name="max_unidades_por_linea" required min="1" max="50" step="1"><div class="err"></div></div>
+  </div>
+  <p id="upd" style="color:var(--muted);font-size:12px"></p>
+  <button class="btn primary">Guardar cambios</button>
+</form>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/config.js"></script>
+</body>
+</html>

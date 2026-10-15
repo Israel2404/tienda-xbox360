@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="grid kpis" id="kpis"></div>
+<div class="grid cols-2">
+  <div class="card"><h2>Ingresos y ventas · últimos 30 días</h2><div class="chart-box"><canvas id="chartVentas" aria-label="Gráfica de ventas diarias"></canvas></div></div>
+  <div class="card"><h2>Unidades por género · 30 días</h2><div class="chart-box"><canvas id="chartGeneros" aria-label="Gráfica de ventas por género"></canvas></div></div>
+</div>
+<div class="grid cols-2e" style="margin-top:14px">
+  <div class="card"><h2>⚠ Alertas de stock bajo</h2><div class="table-wrap"><table class="t" style="min-width:0"><thead><tr><th>Juego</th><th class="num">Stock</th><th class="num">Mín.</th><th></th></tr></thead><tbody id="stockBajo"></tbody></table></div></div>
+  <div class="card"><h2>Top 5 juegos · 30 días</h2><div class="table-wrap"><table class="t" style="min-width:0"><thead><tr><th>Juego</th><th class="num">Unidades</th></tr></thead><tbody id="topJuegos"></tbody></table></div></div>
+  <div class="card"><h2>Últimas ventas</h2><div class="table-wrap"><table class="t" style="min-width:0"><thead><tr><th>Folio</th><th>Fecha</th><th class="num">Total</th><th>Estado</th></tr></thead><tbody id="ultimas"></tbody></table></div></div>
+  <div class="card" id="actividadCard" hidden><h2>Actividad reciente</h2><div class="table-wrap"><table class="t" style="min-width:0"><thead><tr><th>Fecha</th><th>Usuario</th><th>Operación</th></tr></thead><tbody id="actividad"></tbody></table></div></div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/vendor/chart.umd.min.js"></script>
+  <script src="../assets/js/pages/dashboard.js"></script>
+</body>
+</html>

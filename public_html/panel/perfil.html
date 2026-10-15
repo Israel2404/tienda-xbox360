@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi perfil · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="grid cols-2e">
+  <div class="card" id="info"></div>
+  <div class="grid" style="align-content:start">
+    <form class="card" id="fNombre" novalidate><h2>Datos</h2>
+      <div class="field"><label>Nombre <span class="req">*</span></label><input class="input" id="nombre" name="nombre" required minlength="3" maxlength="100"><div class="err"></div></div>
+      <button class="btn primary" style="margin-top:12px">Guardar</button></form>
+    <form class="card" id="fPass" novalidate><h2>Cambiar contraseña</h2>
+      <div class="field"><label>Contraseña actual <span class="req">*</span></label><input class="input" type="password" name="actual" required maxlength="100" autocomplete="current-password"><div class="err"></div></div>
+      <div class="field" style="margin-top:10px"><label>Nueva contraseña <span class="req">*</span></label><input class="input" type="password" name="nueva" required minlength="8" maxlength="100" pattern="(?=.*[A-Za-z])(?=.*\d).{8,}" title="Mínimo 8 caracteres con letras y números" autocomplete="new-password"><div class="err"></div></div>
+      <div class="field" style="margin-top:10px"><label>Confirmar nueva contraseña <span class="req">*</span></label><input class="input" type="password" name="confirmar" required minlength="8" maxlength="100" autocomplete="new-password"><div class="err"></div></div>
+      <button class="btn primary" style="margin-top:12px">Actualizar contraseña</button></form>
+  </div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/perfil.js"></script>
+</body>
+</html>

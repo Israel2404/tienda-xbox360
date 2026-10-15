@@ -1,0 +1,45 @@
+/* ============ Portadas generadas (estuche verde nostálgico) ============ */
+.case {
+  position: relative; width: 100%; height: 100%;
+  border-radius: 4px; overflow: hidden;
+  background: linear-gradient(var(--ang, 150deg), var(--c1, #1b3a1b), var(--c2, #0a1a0a));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  display: flex; flex-direction: column; font-family: "Segoe UI", "Open Sans", system-ui, sans-serif;
+  user-select: none; container-type: size;
+}
+.case.has-img { background: #111; }
+.case.has-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.case-band {
+  flex: 0 0 11%; min-height: 16px;
+  background: linear-gradient(180deg, #7ed957 0%, #3fae1f 45%, #1f7a12 100%);
+  display: flex; align-items: center; justify-content: space-between; padding: 0 7%;
+  color: #fff; font-weight: 700; font-size: 5.2cqw; letter-spacing: .06em; text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0,0,0,.35); box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+.case-band > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.case-band-sku { opacity: .75; font-weight: 600; font-size: .8em; flex: none; margin-left: 6px; }
+@container (max-width: 170px) { .case-band-sku, .case-dev { display: none; } .case-foot { justify-content: space-between; } }
+.case-art {
+  position: relative; flex: 1; display: flex; flex-direction: column; justify-content: center;
+  padding: 10% 8%; overflow: hidden;
+}
+.case-art::before {           /* formas decorativas abstractas */
+  content: ""; position: absolute; inset: 0; opacity: .35; pointer-events: none;
+}
+.case-art.shape-0::before { background: radial-gradient(circle at 80% 20%, rgba(255,255,255,.35), transparent 45%), radial-gradient(circle at 10% 90%, rgba(126,217,87,.35), transparent 50%); }
+.case-art.shape-1::before { background: repeating-linear-gradient(135deg, rgba(255,255,255,.12) 0 2px, transparent 2px 14px), radial-gradient(circle at 50% 110%, rgba(255,200,80,.4), transparent 55%); }
+.case-art.shape-2::before { background: conic-gradient(from 200deg at 70% 30%, transparent, rgba(255,255,255,.25), transparent 30%), radial-gradient(circle at 20% 20%, rgba(80,160,255,.35), transparent 50%); }
+.case-title {
+  position: relative; color: #fff; font-weight: 800; line-height: .95; text-transform: uppercase;
+  letter-spacing: -.01em; text-shadow: 0 2px 10px rgba(0,0,0,.6); overflow-wrap: break-word; hyphens: auto;
+}
+.case-title.lg { font-size: 13cqw; }
+.case-title.md { font-size: 10.5cqw; }
+.case-title.sm { font-size: 8.4cqw; }
+.case-sub { position: relative; margin-top: 6%; color: #d9f5c9; font-weight: 600; font-size: 5cqw; text-transform: uppercase; letter-spacing: .05em; }
+.case-foot {
+  flex: 0 0 9%; display: flex; align-items: center; gap: 6%; padding: 0 6% 4%;
+  color: rgba(255,255,255,.75); font-size: 4cqw;
+}
+.esrb { background: #fff; color: #000; font-weight: 900; padding: 1px 4px; border-radius: 2px; min-width: 1.6em; text-align: center; }
+.case-dev { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

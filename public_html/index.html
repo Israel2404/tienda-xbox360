@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Retro 360 Store</title>
+  <meta name="description" content="Tienda de videojuegos de Xbox 360: explora el catálogo como en la biblioteca de la consola.">
+  <meta name="theme-color" content="#0b140b">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/cover.css">
+  <link rel="stylesheet" href="assets/css/store.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bg-glow"></div><div class="bg-stars"></div>
+    <div class="streaks"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <!-- Barra superior: gamercard / marca / carrito -->
+  <header class="topbar">
+    <a class="gamercard" id="gamercard" href="panel/login.html?next=../index.html">
+      <span class="gc-avatar" id="gcAvatar">?</span>
+      <span class="gc-text">
+        <strong id="gcName">Invitado</strong>
+        <small id="gcSub">Inicia sesión para comprar</small>
+      </span>
+    </a>
+
+    <div class="brand">
+      <img id="brandLogo" src="assets/img/logo.png" alt="" onerror="this.remove()">
+      <span class="brand-mark" aria-hidden="true"><span>360</span></span>
+      <span class="brand-name" id="brandName">Retro 360 Store</span>
+    </div>
+
+    <div class="top-actions">
+      <button class="sound-btn" id="soundBtn" title="Sonidos del menú" aria-pressed="true">🔊</button>
+      <a class="panel-link" id="panelLink" href="panel/dashboard.html" hidden>Panel</a>
+      <button class="cart-pill" id="cartBtn" aria-label="Abrir carrito">
+        <span class="cart-spin" id="cartSpin" hidden></span>
+        <span id="cartLabel">Carrito vacío</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Blades: géneros + buscador -->
+  <nav class="blades" aria-label="Filtrar por género">
+    <div class="blade-tabs" id="genreTabs" role="tablist"></div>
+    <label class="search">
+      <span aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="Buscar juego…" autocomplete="off" aria-label="Buscar juego">
+    </label>
+  </nav>
+
+  <!-- Selector de juegos (coverflow A-Z) -->
+  <main class="shelf-wrap">
+    <div class="shelf" id="shelf" tabindex="0" aria-label="Biblioteca de juegos. Usa las flechas para navegar y Enter para ver detalles." aria-live="polite">
+      <div class="shelf-state" id="shelfState"><div class="ring"></div><p>Cargando biblioteca…</p></div>
+    </div>
+    <div class="reflection" aria-hidden="true"></div>
+    <nav class="az" id="az" aria-label="Saltar a letra"></nav>
+  </main>
+
+  <footer class="bottombar">
+    <div class="clock" id="clock"></div>
+    <div class="now-playing">
+      <button class="nav-btn" id="prevBtn" aria-label="Juego anterior">‹</button>
+      <div class="np-text">
+        <strong id="npTitle">—</strong>
+        <small id="npCount"></small>
+      </div>
+      <button class="nav-btn" id="nextBtn" aria-label="Juego siguiente">›</button>
+    </div>
+    <div class="hints">
+      <span><b class="btn-a">A</b> Detalles</span>
+      <span><b class="btn-b">B</b> Cerrar</span>
+    </div>
+  </footer>
+  <p class="legal">Proyecto académico ITESI · Tienda simulada. Xbox y Xbox 360 son marcas de Microsoft; este sitio no está afiliado.</p>
+
+  <!-- Blade de detalle -->
+  <aside class="blade-panel right" id="detail" aria-hidden="true" aria-label="Detalle del juego">
+    <button class="blade-close" data-close aria-label="Cerrar">✕</button>
+    <div class="detail-body" id="detailBody"></div>
+  </aside>
+
+  <!-- Blade del carrito -->
+  <aside class="blade-panel left" id="cart" aria-hidden="true" aria-label="Carrito">
+    <button class="blade-close" data-close aria-label="Cerrar">✕</button>
+    <h2 class="blade-title">Carrito</h2>
+    <div id="cartBody"></div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <!-- Diálogo de confirmación / resultados -->
+  <dialog class="x-dialog" id="dialog">
+    <form method="dialog" id="dialogForm">
+      <h3 id="dlgTitle"></h3>
+      <div id="dlgBody"></div>
+      <menu id="dlgActions"></menu>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/cover.js"></script>
+  <script src="assets/js/store.js"></script>
+</body>
+</html>

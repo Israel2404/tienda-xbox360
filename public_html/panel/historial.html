@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Historial · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="card">
+<div class="toolbar">
+  <label class="f ">Acción<select class="input" data-filter="accion" id="fAccion"></select></label>
+  <label class="f ">Entidad<select class="input" data-filter="entidad" id="fEntidad"></select></label>
+  <label class="f ">Fecha inicial<input class="input" type="date" data-filter="desde"></label>
+  <label class="f ">Fecha final<input class="input" type="date" data-filter="hasta"></label>
+</div>
+<div class="table-wrap"><table class="t" id="table"><thead><tr><th>Fecha</th><th>Usuario</th><th>Acción</th><th>Registro</th><th>Estado anterior</th><th>Estado nuevo</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager" id="pager"></div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/historial.js"></script>
+</body>
+</html>

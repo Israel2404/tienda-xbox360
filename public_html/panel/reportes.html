@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reportes · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="card" style="margin-bottom:14px">
+  <div class="toolbar" style="margin:0">
+    <label class="f">Fecha inicial<input class="input" type="date" id="desde"></label>
+    <label class="f">Fecha final<input class="input" type="date" id="hasta"></label>
+    <label class="f">Agrupar por<select class="input" id="agrupar"><option value="dia">Día</option><option value="semana">Semana</option><option value="mes">Mes</option></select></label>
+    <button class="btn primary" id="gen">Generar</button>
+    <div class="btn-row"><button class="btn sm" data-range="7">7 días</button><button class="btn sm" data-range="30">30 días</button><button class="btn sm" data-range="90">90 días</button></div>
+  </div>
+  <div class="err" id="rErr" style="margin-top:6px"></div>
+  <p id="periodo" style="color:var(--muted);margin:8px 0 0"></p>
+</div>
+<h2 style="font-weight:300">1 · Ventas por periodo <button class="btn sm" id="csvVentas">⬇ CSV</button></h2>
+<div id="resumen" style="margin-bottom:14px"></div>
+<div class="grid cols-2">
+  <div class="card"><h3>Ingresos</h3><div class="chart-box"><canvas id="cSerie"></canvas></div></div>
+  <div class="card"><h3>Por método de pago</h3><div class="chart-box"><canvas id="cCanal"></canvas></div></div>
+</div>
+<div class="card" style="margin-top:14px"><h3>Por vendedor y canal</h3><div id="tVend"></div></div>
+<h2 style="font-weight:300;margin-top:26px">2 · Juegos y géneros más vendidos <button class="btn sm" id="csvJuegos">⬇ CSV</button></h2>
+<div class="grid cols-2">
+  <div class="card"><h3>Top 10 por unidades</h3><div class="chart-box" style="height:320px"><canvas id="cTop"></canvas></div></div>
+  <div class="card"><h3>Por género</h3><div class="chart-box" style="height:320px"><canvas id="cGenero"></canvas></div></div>
+</div>
+<div class="card" style="margin-top:14px" id="tTop"></div>
+<h2 style="font-weight:300;margin-top:26px">3 · Inventario valorizado y alertas <button class="btn sm" id="csvInv">⬇ CSV</button></h2>
+<div class="card" id="tInv"></div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/vendor/chart.umd.min.js"></script>
+  <script src="../assets/js/pages/reportes.js"></script>
+</body>
+</html>

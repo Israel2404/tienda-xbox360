@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clientes · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="card">
+<div class="toolbar">
+  <label class="f grow">Buscar<input class="input" type="search" data-filter="q" placeholder="Nombre, correo, teléfono o gamertag"></label>
+  <label class="f ">Estado<select class="input" data-filter="estado"><option value="activos">Activos</option><option value="inactivos">Inactivos</option><option value="todos">Todos</option></select></label>
+  <label class="f ">Por página<select class="input" data-filter="limit"><option>10</option><option>20</option><option>50</option></select></label>
+</div>
+<div class="table-wrap"><table class="t" id="table"><thead><tr><th data-sort="nombre">Cliente</th><th>Correo</th><th>Teléfono</th><th data-sort="compras" class="num">Compras</th><th data-sort="total" class="num">Total comprado</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager" id="pager"></div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/clientes.js"></script>
+</body>
+</html>

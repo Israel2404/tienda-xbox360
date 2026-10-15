@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Punto de venta · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="pos">
+  <div class="card">
+    <div class="toolbar"><label class="f grow">Buscar juego o escanear SKU + Enter<input class="input" id="q" type="search" placeholder="Ej. Halo o X360-0036" autocomplete="off"></label></div>
+    <div class="pos-grid" id="grid"></div>
+  </div>
+  <div class="card" style="position:sticky;top:16px">
+    <h2>Ticket</h2>
+    <div id="ticket"></div>
+    <div class="form-grid" style="margin-top:12px">
+      <label class="f">Cliente<select class="input" id="cliente"><option value="">Público en general</option></select></label>
+      <label class="f">Método de pago<select class="input" id="metodo"><option value="efectivo">Efectivo</option><option value="tarjeta">Tarjeta</option><option value="transferencia">Transferencia</option></select></label>
+    </div>
+    <div class="totals-box" style="margin-top:12px">
+      <div><span>Subtotal</span><span id="tSub">$0.00</span></div>
+      <div><span>IVA (<span id="ivaPct">16</span>%)</span><span id="tIva">$0.00</span></div>
+      <div class="grand"><span>Total</span><span id="tTotal">$0.00</span></div>
+    </div>
+    <p style="color:var(--muted);font-size:12px">Vista previa. El servidor recalcula precios, impuestos y existencias al cobrar.</p>
+    <div class="btn-row"><button class="btn primary" id="pay" style="flex:1" disabled>Cobrar</button><button class="btn danger" id="clear">Vaciar</button></div>
+  </div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/pos.js"></script>
+</body>
+</html>

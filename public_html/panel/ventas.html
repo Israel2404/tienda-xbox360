@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventas · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="card">
+<div class="toolbar">
+  <label class="f grow">Buscar<input class="input" type="search" data-filter="q" placeholder="Folio o cliente"></label>
+  <label class="f ">Fecha inicial<input class="input" type="date" data-filter="desde"></label>
+  <label class="f ">Fecha final<input class="input" type="date" data-filter="hasta"></label>
+  <label class="f ">Estado<select class="input" data-filter="estado"><option value="">Todos</option><option value="completada">Completada</option><option value="cancelada">Cancelada</option></select></label>
+  <label class="f staff-only">Canal<select class="input" data-filter="canal"><option value="">Todos</option><option value="mostrador">Mostrador</option><option value="online">En línea</option></select></label>
+  <label class="f staff-only">Pago<select class="input" data-filter="metodo"><option value="">Todos</option><option value="efectivo">Efectivo</option><option value="tarjeta">Tarjeta</option><option value="transferencia">Transferencia</option></select></label>
+</div>
+<p id="resumen" style="color:var(--muted);margin:0 0 10px"></p>
+<div class="table-wrap"><table class="t" id="table"><thead><tr><th data-sort="folio">Folio</th><th data-sort="fecha">Fecha</th><th data-sort="cliente" class="staff-only">Cliente</th><th class="staff-only">Registró</th><th>Canal / pago</th><th class="num">Artículos</th><th data-sort="total" class="num">Total</th><th>Estado</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager" id="pager"></div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/ventas.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventario · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="card">
+<div class="toolbar">
+  <label class="f grow">Buscar<input class="input" type="search" data-filter="q" placeholder="Juego, SKU o motivo"></label>
+  <label class="f ">Tipo<select class="input" data-filter="tipo"><option value="">Todos</option><option value="entrada">Entrada</option><option value="salida">Salida</option><option value="ajuste">Ajuste</option><option value="venta">Venta</option><option value="cancelacion">Cancelación</option></select></label>
+  <label class="f ">Fecha inicial<input class="input" type="date" data-filter="desde"></label>
+  <label class="f ">Fecha final<input class="input" type="date" data-filter="hasta"></label>
+</div>
+<div class="table-wrap"><table class="t" id="table"><thead><tr><th data-sort="fecha">Fecha</th><th data-sort="juego">Juego</th><th data-sort="tipo">Tipo</th><th data-sort="cantidad" class="num">Cantidad</th><th class="num">Stock</th><th>Usuario</th><th>Referencia</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager" id="pager"></div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/inventario.js"></script>
+</body>
+</html>

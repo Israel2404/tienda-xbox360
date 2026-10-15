@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usuarios · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/cover.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+<div id="page" hidden>
+<div class="card">
+<div class="toolbar">
+  <label class="f grow">Buscar<input class="input" type="search" data-filter="q" placeholder="Nombre o correo"></label>
+  <label class="f ">Rol<select class="input" data-filter="rol" id="fRol"></select></label>
+  <label class="f ">Estado<select class="input" data-filter="estado"><option value="todos">Todos</option><option value="activos">Activos</option><option value="inactivos">Inactivos</option></select></label>
+</div>
+<div class="table-wrap"><table class="t" id="table"><thead><tr><th data-sort="nombre">Nombre</th><th data-sort="email">Correo</th><th data-sort="rol">Rol</th><th data-sort="acceso">Último acceso</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager" id="pager"></div>
+</div>
+</div>
+<noscript>Este panel requiere JavaScript.</noscript>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cover.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/usuarios.js"></script>
+</body>
+</html>

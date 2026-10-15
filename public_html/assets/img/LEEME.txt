@@ -1,0 +1,2 @@
+Coloca aquí tu logotipo como "logo.png" (altura recomendada 84 px, fondo transparente).
+La tienda lo detecta sola y lo muestra en la barra superior en lugar del emblema "360".

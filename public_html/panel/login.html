@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión · Retro 360</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/panel.css">
+</head>
+<body>
+  <div class="auth">
+    <div class="card auth-card">
+      <div class="brandline">
+        <a class="side-brand" href="../index.html" style="padding:0"><span class="orb">360</span><b>retro 360 store</b></a>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="on" data-tab="login" role="tab">Iniciar sesión</button>
+        <button data-tab="registro" role="tab">Crear cuenta</button>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="field"><label for="email">Correo electrónico <span class="req">*</span></label>
+          <input class="input" id="email" name="email" type="email" required maxlength="150" autocomplete="username"><div class="err"></div></div>
+        <div class="field" style="margin-top:10px"><label for="password">Contraseña <span class="req">*</span></label>
+          <input class="input" id="password" name="password" type="password" required maxlength="100" autocomplete="current-password"><div class="err"></div></div>
+        <button class="btn primary" type="submit" style="width:100%;margin-top:16px">Entrar</button>
+        <div class="demo-users">Usuarios de prueba:
+          <button type="button" data-u="admin@retro360.test:Admin360!">Administrador</button> ·
+          <button type="button" data-u="vendedor@retro360.test:Vendedor360!">Vendedor</button> ·
+          <button type="button" data-u="cliente@retro360.test:Cliente360!">Cliente</button>
+        </div>
+      </form>
+
+      <form id="regForm" novalidate hidden>
+        <div class="field"><label>Nombre completo <span class="req">*</span></label>
+          <input class="input" name="nombre" required minlength="3" maxlength="100" autocomplete="name"><div class="err"></div></div>
+        <div class="field" style="margin-top:10px"><label>Correo electrónico <span class="req">*</span></label>
+          <input class="input" name="email" type="email" required maxlength="150" autocomplete="email"><div class="err"></div></div>
+        <div class="form-grid" style="margin-top:10px">
+          <div class="field"><label>Gamertag</label><input class="input" name="gamertag" maxlength="30"><div class="err"></div></div>
+          <div class="field"><label>Teléfono</label><input class="input" name="telefono" maxlength="20" pattern="[0-9 +\-]{7,20}"><div class="err"></div></div>
+        </div>
+        <div class="field" style="margin-top:10px"><label>Contraseña <span class="req">*</span></label>
+          <input class="input" name="password" type="password" required minlength="8" maxlength="100" pattern="(?=.*[A-Za-z])(?=.*\d).{8,}" title="Mínimo 8 caracteres con letras y números" autocomplete="new-password"><div class="err"></div></div>
+        <button class="btn primary" type="submit" style="width:100%;margin-top:16px">Crear cuenta de cliente</button>
+      </form>
+      <p style="text-align:center;margin:16px 0 0"><a href="../index.html">← Volver a la tienda</a></p>
+    </div>
+  </div>
+  <div class="toast-stack" id="toasts"></div>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/panel.js"></script>
+  <script src="../assets/js/pages/login.js"></script>
+</body>
+</html>
